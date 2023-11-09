@@ -1,4 +1,4 @@
-export const API_URL = "https://neymarmeter.vercel.app";
+export const API_URL = "https://mencionometro.vercel.app";
 
 export const unsplashCredits = [
   {
