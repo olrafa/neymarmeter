@@ -1,154 +1,139 @@
 body {
-    background-image: url(./assets/img001.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: "Roboto", sans-serif;
-    position: relative;
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+#content {
+  background: rgba(5, 46, 46, 0.9);
+  padding: 1rem 2rem;
+  color: floralwhite;
+  border-radius: 4px;
+  text-align: center;
+}
+
+#board {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#chart {
+  margin-top: 2rem;
+  border-radius: 4px;
+  padding: 0.5rem;
+  padding-top: 0.79rem;
+  background-color: rgb(13, 17, 23, 0.8);
+  opacity: 1;
+  display: flex;
+  overflow-x: auto;
+  justify-content: center;
+}
+
+#detail {
+  margin-top: 1px;
+  border-radius: 4px;
+  padding: 1rem;
+  background-color: rgb(13, 17, 23, 0.8);
+  opacity: 1;
+  height: 1.2rem;
+  text-align: center;
+  color: ghostwhite;
+}
+
+.time-block {
+  display: inline-block;
+}
+
+.run-block {
+  width: 15px;
+  height: 15px;
+  margin: 3px 2px;
+  border-radius: 2px;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.highlight {
+  border-color: #39d353;
+}
+
+.no-highlight {
+  opacity: 0.1;
+}
+
+#info {
+  text-align: left;
+  padding: 0 0.5rem;
+  width: 40rem;
+  margin: 0 auto;
+}
+
+h4 {
+  text-align: center;
+}
+
+#info a:link {
+  text-decoration: none;
+  color: aquamarine;
+}
+
+#info a:visited {
+  color: floralwhite;
+}
+
+#info a:hover {
+  color: aquamarine;
+}
+
+#site-list {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 4px;
+  padding: 0.5rem;
+  background-color: rgb(13, 17, 23, 0.8);
+  margin-top: 1px;
+}
+
+.search-site {
+  color: darkslategray;
+  width: fit-content;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.search-site:hover {
+  color: #7fffd4;
+}
+
+.site-result {
+  color: aquamarine;
+}
+
+/* For mobile screens */
+@media (max-width: 767px) {
+  body {
+    background-position: center;
   }
-  
-  h1 {
-    text-transform: uppercase;
-  }
-  
+
   #content {
-    background: rgba(0, 128, 128, 0.9);
-    padding: 1rem 2rem;
-    color: floralwhite;
-    border-radius: 4px;
-    text-align: center;
+    margin: 1rem 0.5rem;
   }
-  
-  #chart {
-    margin-top: 2rem;
-    border-radius: 4px;
-    padding: 0.5rem;
-    padding-top: 0.79rem;
-    background-color: rgb(13, 17, 23, 0.8);
-    opacity: 1;
-    display: flex;
-    overflow-x: auto;
-    justify-content: center;
-  }
-  
+
   #detail {
-    margin-top: 1px;
-    border-radius: 4px;
-    padding: 1rem;
-    background-color: rgb(13, 17, 23, 0.8);
-    opacity: 1;
-    height: 1.2rem;
-    text-align: center;
-    color: ghostwhite;
+    height: 2.4rem;
   }
-  
-  .time-block {
-    display: inline-block;
-  }
-  
-  .run-block {
-    width: 15px;
-    height: 15px;
-    margin: 3px 2px;
-    border-radius: 2px;
-    position: relative;
-    border: 1px solid rgba(0, 0, 0, 0);
-  }
-  
-  .highlight {
-    border-color: #39d353;
-  }
-  
-  .no-highlight {
-    opacity: 0.1;
-  }
-  
+
   #info {
-    text-align: left;
-    padding: 0 0.5rem;
-    width: 40rem;
-    margin: 0 auto;
+    padding: 0;
+    width: 100%;
   }
-  
-  h3 {
-    text-align: center;
+
+  #board {
+    width: 100%;
   }
-  
-  #info a:link {
-    text-decoration: none;
-    color: aquamarine;
-  }
-  
-  #info a:visited {
-    color: floralwhite;
-  }
-  
-  #info a:hover {
-    color: aquamarine;
-  }
-  
-  #site-list {
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 4px;
-    padding: 0.5rem;
-    background-color: rgb(13, 17, 23, 0.8);
-    margin-top: 1px;
-  }
-  
-  .search-site {
-    color: darkslategray;
-    width: fit-content;
-    padding: 0.5rem;
-    border-radius: 5px;
-    font-weight: 600;
-    text-decoration: none;
-  }
-  
-  .search-site:hover {
-    color: aquamarine;
-  }
-  
-  .site-result {
-    color: aquamarine;
-  }
-  
-  #unsplash-credit {
-    background: #f1f1f1;
-    padding: 0.5rem 0.5rem;
-    width: fit-content;
-    border-radius: 8px;
-    opacity: 0.8;
-    position: fixed;
-    right: 1rem;
-    bottom: 1rem;
-    font-size: 12px;
-  }
-  
-  /* For mobile screens */
-  @media (max-width: 767px) {
-    body {
-      background-position: center;
-    }
-  
-    #content {
-      margin: 1rem 0.5rem;
-    }
-  
-    #detail {
-      height: 2.4rem;
-    }
-  
-    #info {
-      padding: 0;
-      width: 100%;
-    }
-  
-    #unsplash-credit {
-      margin-top: 10px;
-      position: relative;
-      float: right;
-      margin-right: -7px;
-    }
-  }
-  
+}
