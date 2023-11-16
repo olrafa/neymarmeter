@@ -11,3 +11,11 @@ export type Site = {
   site: string;
   url: string;
 };
+
+export type Story = {
+  title: string;
+  link: string;
+  source: string;
+  date: string;
+  imageUrl: string;
+};

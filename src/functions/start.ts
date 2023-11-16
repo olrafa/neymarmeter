@@ -3,11 +3,9 @@ import { createTimeBlocks } from "./chart";
 import { getData } from "./data";
 
 const createSitesList = (sites: Site[]) => {
-  // eslint-disable-next-line no-undef
   const siteList = document.getElementById("site-list");
   if (!siteList) return;
   sites.forEach((s) => {
-    // eslint-disable-next-line no-undef
     const item = document.createElement("div");
     siteList.appendChild(item);
     item.innerHTML = s.site;
