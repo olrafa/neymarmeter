@@ -7,12 +7,8 @@ const getStories = async () => {
   const todayString =
     today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
 
-  console.log(todayString);
-
   const yesterday = new Date(today);
   yesterday.setDate(yesterday.getDate() - 1);
-
-  console.log(yesterday.toLocaleDateString("pt-BR"));
 
   const news = await getData(`/news?date=${todayString}`);
 
