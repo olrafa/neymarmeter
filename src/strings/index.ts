@@ -15,3 +15,5 @@ export const EXPLAINER = {
   é se o site traz alguma menção ou não. Mesmo se existirem menções em editorias 
   diferentes (esportes e celebridades, por exemplo), cada site conta uma vez só.`,
 };
+
+export const STORIES = "Principais notícias ao final do dia "

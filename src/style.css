@@ -67,8 +67,9 @@ h1 {
 #info {
   text-align: left;
   padding: 0 0.5rem;
-  width: 40rem;
+  width: 80%;
   margin: 0 auto;
+  display: flex;
 }
 
 h4 {
@@ -81,11 +82,19 @@ h4 {
 }
 
 #info a:visited {
-  color: floralwhite;
+  color: darkcyan;
 }
 
 #info a:hover {
   color: aquamarine;
+}
+
+#stories a:hover {
+  color: #39d353;
+}
+
+#stories {
+  margin: 0 1rem;
 }
 
 #site-list {
@@ -114,6 +123,12 @@ h4 {
   color: aquamarine;
 }
 
+#explainer {
+  width: 50%;
+  font-size: 14px;
+  margin-right: 1rem;
+}
+
 /* For mobile screens */
 @media (max-width: 767px) {
   body {
@@ -131,9 +146,19 @@ h4 {
   #info {
     padding: 0;
     width: 100%;
+    display: block;
   }
 
   #board {
     width: 100%;
+  }
+
+  #stories {
+    margin: 0;
+  }
+
+  #explainer {
+    width: 100%;
+    margin: 0;
   }
 }

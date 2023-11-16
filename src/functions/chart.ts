@@ -2,7 +2,6 @@ import { MentionsSummary } from "../types";
 import { getIsToday } from "./util";
 
 const createEmptyBlock = (element: HTMLDivElement) => {
-  // eslint-disable-next-line no-undef
   const emptyBlock = document.createElement("div");
   emptyBlock.className = "run-block";
   element.appendChild(emptyBlock);
@@ -43,7 +42,6 @@ const addBlocks = (
 
   const { color = "#161b22", mentions = 0, sites = [] } = runData || {};
 
-  // eslint-disable-next-line no-undef
   const runBlock = document.createElement("div");
   dayBlock.appendChild(runBlock);
   runBlock.className = "run-block";
@@ -51,7 +49,6 @@ const addBlocks = (
   runBlock.dataset.sites = sites.join(",");
 
   const siteNameElements = Array.from(
-    // eslint-disable-next-line no-undef
     document.querySelectorAll(".search-site")
   );
 
@@ -67,7 +64,6 @@ const addEvents = (
   mentions: number,
   resultSites: Element[]
 ) => {
-  // eslint-disable-next-line no-undef
   const detail = document.getElementById("detail");
 
   ["mouseenter", "touchstart"].map((event) =>
@@ -90,15 +86,12 @@ const addEvents = (
 };
 
 const addSitesHover = () => {
-  // eslint-disable-next-line no-undef
   const detail = document.getElementById("detail");
 
   const siteNameElements = Array.from(
-    // eslint-disable-next-line no-undef
     document.querySelectorAll(".search-site")
   );
 
-  // eslint-disable-next-line no-undef
   const runBlocks = Array.from(
     document.querySelectorAll(".run-block")
   ) as HTMLDivElement[];
@@ -132,7 +125,6 @@ const highlightRuns = (siteName: string, runBlocks: HTMLDivElement[]) =>
   });
 
 const removeHighlights = (elements: HTMLDivElement[]) => {
-  // eslint-disable-next-line no-undef
   const detail = document.getElementById("detail");
   detail!.innerHTML = "";
   elements.forEach((el) => {
@@ -142,10 +134,8 @@ const removeHighlights = (elements: HTMLDivElement[]) => {
 };
 
 const fillDay = (day: Date, timestamps: Date[], summary: MentionsSummary) => {
-  // eslint-disable-next-line no-undef
   const chart = document.getElementById("chart");
 
-  // eslint-disable-next-line no-undef
   const dayBlock = document.createElement("div");
   chart!.appendChild(dayBlock);
   dayBlock.className = "time-block";

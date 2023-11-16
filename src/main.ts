@@ -1,8 +1,10 @@
+import getNews from "./functions/getStories";
 import { initialize } from "./functions/start";
 import {
   EXPLAINER,
   INITIAL_DETAIL_CAPTION,
   PAGE_TITLE,
+  STORIES,
   SUB_TITLE,
 } from "./strings";
 import "./style.css";
@@ -17,14 +19,19 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 <div id="site-list">
 </div></div>
 <div id="info">
+<div id="stories"><h3 id="stories-date-header">${STORIES}</h3></div>
+  <div id="explainer">
   <h3>${EXPLAINER.title}</h3>
   <p>
     ${EXPLAINER.robot}<br /><br />
     ${EXPLAINER.chart}<br /><br />
     ${EXPLAINER.clarifier}
-  </p>
+  </p></div>
+  
 </div>
+
 </div>
 `;
 
 initialize();
+getNews();
