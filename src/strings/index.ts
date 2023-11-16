@@ -20,4 +20,4 @@ export const EXPLAINER = {
     Essas são as notícias aqui ao lado.`
 };
 
-export const STORIES = "Principais notícias ao final do dia "
+export const STORIES = "Principais notícias ao final do dia ";
