@@ -23,9 +23,6 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
     ${EXPLAINER.chart}<br /><br />
     ${EXPLAINER.clarifier}
   </p>
-  <p>
-    ${EXPLAINER.code}
-  </p>
 </div>
 </div>
 `;

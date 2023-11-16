@@ -14,11 +14,4 @@ export const EXPLAINER = {
   clarifier: `Não contamos quantas menções existiam em cada site. A contagem 
   é se o site traz alguma menção ou não. Mesmo se existirem menções em editorias 
   diferentes (esportes e celebridades, por exemplo), cada site conta uma vez só.`,
-  code: ` O código está disponível no
-    <a
-      href="https://github.com/olrafa/neymarmeter"
-      target="_blank"
-      rel="noopener noreferrer"
-      >Github</a
-    >.`,
 };
