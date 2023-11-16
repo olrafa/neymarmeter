@@ -25,7 +25,8 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <p>
     ${EXPLAINER.robot}<br /><br />
     ${EXPLAINER.chart}<br /><br />
-    ${EXPLAINER.clarifier}
+    ${EXPLAINER.clarifier}<br /><br />
+    ${EXPLAINER.newsFeed}
   </p></div>
   
 </div>
