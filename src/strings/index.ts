@@ -15,9 +15,9 @@ export const EXPLAINER = {
   é se o site traz alguma menção ou não. Mesmo se existirem menções em editorias 
   diferentes (esportes e celebridades, por exemplo), cada site conta uma vez só.`,
   newsFeed: `Outro robô procura por "Neymar" no Google News todos os dias,
-    por volta das 21h de Brasília, ou um pouco mais tarde. Ele filtra,
+    por volta das 22h de Brasília, ou um pouco mais tarde. Ele filtra,
     entre os 10 primeiros resultados, os que foram publicados há menos de 24 horas. 
-    Essas são as notícias aqui ao lado.`
+    Essas são as manchetes que mostramos.`
 };
 
 export const STORIES = "Principais notícias ao final do dia ";
