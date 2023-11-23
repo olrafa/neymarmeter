@@ -19,7 +19,16 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 <div id="site-list">
 </div></div>
 <div id="info">
-<div id="stories"><h3 id="stories-date-header">${STORIES}</h3></div>
+<div id="stories"><h3 id="stories-date-header">${STORIES}</h3>
+<div id="date-selection">
+<span class="nav-arrow arrow-previous">
+</span>
+<span id="stories-date-string">
+</span>
+<span class="nav-arrow arrow-next">
+</span>
+</div>
+</div>
   <div id="explainer">
   <h3>${EXPLAINER.title}</h3>
   <p>

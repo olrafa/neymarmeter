@@ -1,25 +1,19 @@
 import { Story } from "../types";
 import { getData } from "./data";
+import { formateDate, getDateString } from "./util";
 
 const getStories = async () => {
   const today = new Date();
 
-  const todayString =
-    today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
+  const todayString = getDateString();
+  const news = await getData(`/news?date=${todayString}`);
+  news && addStories(news);
 
   const yesterday = new Date(today);
   yesterday.setDate(yesterday.getDate() - 1);
 
-  const news = await getData(`/news?date=${todayString}`);
-
-  news && addStories(news);
-
-  const newsHeader = document.getElementById("stories-date-header");
-  newsHeader!.innerHTML += yesterday.toLocaleDateString("pt-BR", {
-    month: "long",
-    day: "numeric",
-    year: "numeric"
-  });
+  const newsHeader = document.getElementById("stories-date-string");
+  newsHeader!.innerHTML = formateDate(yesterday);
 };
 
 const addStories = (stories: Story[]) => {
