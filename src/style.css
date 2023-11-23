@@ -150,6 +150,11 @@ h4 {
   transform: rotate(-45deg);
 }
 
+.hidden-arrow {
+  opacity: 0.1;
+  pointer-events: none;
+}
+
 /* For mobile screens */
 @media (max-width: 767px) {
   body {
