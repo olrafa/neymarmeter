@@ -28,6 +28,7 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 <span class="nav-arrow arrow-next">
 </span>
 </div>
+<div id="stories-list"></div>
 </div>
   <div id="explainer">
   <h3>${EXPLAINER.title}</h3>

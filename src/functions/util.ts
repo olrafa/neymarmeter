@@ -21,7 +21,7 @@ export const getDateString = (date?: Date) => {
   );
 };
 
-export const formateDate = (date: Date) =>
+export const formatDate = (date: Date) =>
   date.toLocaleDateString("pt-BR", {
     month: "long",
     day: "numeric",

@@ -1,6 +1,7 @@
 import { Site } from "../types";
 import { createTimeBlocks } from "./chart";
 import { getData } from "./data";
+import { addArrowListeners } from "./datePicker";
 
 const createSitesList = (sites: Site[]) => {
   const siteList = document.getElementById("site-list");
@@ -19,6 +20,8 @@ export const initialize = async () => {
 
   const timestamps = await getData("/mentions/neymar/timestamps");
   const summary = await getData("/mentions/neymar/summary");
+
+  addArrowListeners();
 
   timestamps && createTimeBlocks(timestamps, summary);
 };
