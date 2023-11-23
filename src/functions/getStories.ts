@@ -1,29 +1,30 @@
+import { ONE_DAY } from "../constants";
 import { Story } from "../types";
 import { getData } from "./data";
+import { checkForDisabledArrows } from "./datePicker";
+import { formatDate, getDateString } from "./util";
 
-const getStories = async () => {
-  const today = new Date();
+const getStories = async (date?: Date) => {
+  const storiesBlock = document.getElementById("stories-list");
+  storiesBlock!.innerHTML = "";
 
-  const todayString =
-    today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
+  const selectedDate = date || new Date();
 
-  const yesterday = new Date(today);
-  yesterday.setDate(yesterday.getDate() - 1);
-
-  const news = await getData(`/news?date=${todayString}`);
-
+  const selectedDateString = getDateString(selectedDate);
+  const news = await getData(`/news?date=${selectedDateString}`);
   news && addStories(news);
 
-  const newsHeader = document.getElementById("stories-date-header");
-  newsHeader!.innerHTML += yesterday.toLocaleDateString("pt-BR", {
-    month: "long",
-    day: "numeric",
-    year: "numeric"
-  });
+  const headerDate = new Date(selectedDate);
+  headerDate.setTime(headerDate.getTime() - ONE_DAY);
+
+  const newsHeader = document.getElementById("stories-date-string");
+  newsHeader!.innerHTML = formatDate(headerDate);
+  newsHeader!.dataset.date = headerDate.toDateString();
+  checkForDisabledArrows(headerDate);
 };
 
 const addStories = (stories: Story[]) => {
-  const storiesBlock = document.getElementById("stories");
+  const storiesBlock = document.getElementById("stories-list");
 
   stories.forEach((story) => {
     const line = document.createElement("p");
