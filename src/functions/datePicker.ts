@@ -37,10 +37,11 @@ export const checkForDisabledArrows = (headerDate?: Date) => {
   hideShowArrow(previous, isFirstDate);
 
   const now = new Date();
+  now.setHours(0, 0, 0, 0);
   const isLatestDay =
-    now.getTime() - headerDate.getTime() <= ONE_DAY + 60 * 1000;
+    now.getTime() - headerDate.getTime() <= ONE_DAY;
 
-  hideShowArrow(next, isLatestDay);
+    hideShowArrow(next, isLatestDay);
 };
 
 const hideShowArrow = (element: Element, hide: boolean) => {
