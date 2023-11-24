@@ -95,6 +95,7 @@ h4 {
 
 #stories {
   margin: 0 1rem;
+  width: 100%;
 }
 
 #site-list {
@@ -153,6 +154,10 @@ h4 {
 .hidden-arrow {
   opacity: 0.1;
   pointer-events: none;
+}
+
+.highlighted-day {
+  border: 1px solid whitesmoke;
 }
 
 /* For mobile screens */

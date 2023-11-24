@@ -1,5 +1,5 @@
 import { MentionsSummary } from "../types";
-import { getIsToday } from "./util";
+import { getDateString, getIsToday } from "./util";
 
 const createEmptyBlock = (element: HTMLDivElement) => {
   const emptyBlock = document.createElement("div");
@@ -137,6 +137,7 @@ const fillDay = (day: Date, timestamps: Date[], summary: MentionsSummary) => {
   const chart = document.getElementById("chart");
 
   const dayBlock = document.createElement("div");
+  dayBlock.dataset.date = getDateString(day);
   chart!.appendChild(dayBlock);
   dayBlock.className = "time-block";
   const dayRuns = timestamps.filter(
@@ -168,4 +169,18 @@ export const createTimeBlocks = (
   const uniqueDays = [...new Set(days)].map((d) => new Date(d));
   uniqueDays.forEach((d) => fillDay(d, timestamps, summary));
   addSitesHover();
+};
+
+export const highlightDay = (dateString: string) => {
+  const dayBlocks = Array.from(
+    document.querySelectorAll(".time-block")
+  ) as HTMLDivElement[];
+
+  dayBlocks.forEach((db) => {
+    if (db.dataset.date === dateString) {
+      db.classList.add("highlighted-day");
+    } else {
+      db.classList.remove("highlighted-day");
+    }
+  });
 };

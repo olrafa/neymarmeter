@@ -1,12 +1,13 @@
 import { ONE_DAY } from "../constants";
 import { Story } from "../types";
+import { highlightDay } from "./chart";
 import { getData } from "./data";
 import { checkForDisabledArrows } from "./datePicker";
 import { formatDate, getDateString } from "./util";
 
 const getStories = async (date?: Date) => {
   const storiesBlock = document.getElementById("stories-list");
-  storiesBlock!.innerHTML = "";
+  storiesBlock!.innerHTML = "Carregando...";
 
   const selectedDate = date || new Date();
 
@@ -21,10 +22,12 @@ const getStories = async (date?: Date) => {
   newsHeader!.innerHTML = formatDate(headerDate);
   newsHeader!.dataset.date = headerDate.toDateString();
   checkForDisabledArrows(headerDate);
+  highlightDay(getDateString(headerDate));
 };
 
 const addStories = (stories: Story[]) => {
   const storiesBlock = document.getElementById("stories-list");
+  storiesBlock!.innerHTML = "";
 
   stories.forEach((story) => {
     const line = document.createElement("p");
