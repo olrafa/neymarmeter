@@ -9,6 +9,10 @@ import {
 } from "./strings";
 import "./style.css";
 
+import { inject } from "@vercel/analytics";
+
+inject();
+
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 <div id="content">
 <h1>${PAGE_TITLE}</h1>
