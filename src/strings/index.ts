@@ -11,7 +11,7 @@ export const EXPLAINER = {
   chart: `O gráfico, claramente inspirado no gráfico de contibuições do Github,
     mostra em quantos sites encontramos "Neymar" na página
     principal. Quanto mais claro o verde, mais sites tinham o termo em sua
-    página naquele momento.`,
+    página naquele momento. Aqui mostramos dados para os últimos 30 dias.`,
   clarifier: `Não contamos quantas menções existiam em cada site. A contagem 
   é se o site traz alguma menção ou não. Mesmo se existirem menções em editorias 
   diferentes (esportes e celebridades, por exemplo), cada site conta uma vez só.`,

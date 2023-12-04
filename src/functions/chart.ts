@@ -104,7 +104,7 @@ const addSitesHover = () => {
         ).length;
         highlightRuns(site.innerHTML, runBlocks);
 
-        detail!.innerHTML = `O termo "Neymar" foi encontrado em ${runsCount} visitas ao site ${site.innerHTML}`;
+        detail!.innerHTML = `O termo "Neymar" foi encontrado em ${runsCount} visitas ao site ${site.innerHTML} nos últimos 30 dias.`;
       })
     );
   });
