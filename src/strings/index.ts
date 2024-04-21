@@ -10,8 +10,7 @@ export const EXPLAINER = {
     robô abre a página inicial dos principais sites de notícias do Brasil.
     Se o robô encontra o termo "Neymar", cria uma entrada no banco de
     dados.`,
-  chart: `O gráfico, claramente inspirado no gráfico de contibuições do Github,
-    mostra em quantos sites encontramos "Neymar" na página
+  chart: `O gráfico mostra em quantos sites encontramos "Neymar" na página
     principal. Quanto mais claro o verde, mais sites tinham o termo em sua
     página naquele momento. Aqui mostramos dados para os últimos 30 dias.`,
   clarifier: `Não contamos quantas menções existiam em cada site. A contagem 
