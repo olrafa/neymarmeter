@@ -25,12 +25,6 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 <div id="info">
 <div id="stories"><h3 id="stories-date-header">${STORIES}</h3>
 <div id="date-selection">
-<span class="nav-arrow arrow-previous">
-</span>
-<span id="stories-date-string">
-</span>
-<span class="nav-arrow arrow-next">
-</span>
 </div>
 <div id="stories-list"></div>
 </div>
