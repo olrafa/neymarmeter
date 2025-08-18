@@ -7,7 +7,7 @@ import { formatDate, getDateString } from "./util";
 
 const getStories = async (date?: Date) => {
   const storiesBlock = document.getElementById("stories-list");
-  storiesBlock!.innerHTML = "Carregando...";
+  storiesBlock!.innerHTML = "Este projeto foi arquivado em 2024.";
 
   const selectedDate = date || new Date();
 
